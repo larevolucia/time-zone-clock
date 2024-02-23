@@ -20,10 +20,20 @@
 
       <select name="city-list" id="city-list">
         <option value="">--Select a City--</option>
-        <option value="">Rio de Janeiro</option>
-        <option value="">Amsterdam</option>
-        <option value="">Tokyo</option>
+        <option value="Brazil/East" id="rio-de-janeiro">Rio de Janeiro</option>
+        <option value="Europe/Amsterdam" id="amsterdam">Amsterdam</option>
+        <option value="Asia/Tokyo" id="tokyo">Tokyo</option>
       </select>
+
+      <div class="city row" id="city-data">
+        <div class="col">
+          <h2 id="city-name"></h2>
+          <div class="date"></div>
+        </div>
+        <div class="col">
+          <div class="time"></div>
+        </div>
+      </div>
 
       <div class="city row" id="rio-de-janeiro">
         <div class="col">
@@ -41,7 +51,7 @@
           <div class="date"></div>
         </div>
         <div class="col">
-          <div class="time">></div>
+          <div class="time"></div>
         </div>
       </div>
 
