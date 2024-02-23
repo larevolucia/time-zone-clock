@@ -14,15 +14,23 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
 }
-footer {
-  padding: 30px;
-}
 .city {
   margin: 10px 0;
   justify-content: space-between;
   padding: 30px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+.city:last-child {
+  border: none;
+}
 .time {
   font-size: 45px;
+}
+.date {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+  padding: 30px;
+  color: rgba(0, 0, 0, 0.8);
 }
