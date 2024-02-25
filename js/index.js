@@ -1,4 +1,23 @@
 // on load
+function showTime() {
+  let localElement = document.querySelector("#local");
+  if (localElement) {
+    let localTimeZone = moment.tz.guess();
+    let localTime = moment().tz(localTimeZone);
+
+    let localTimeElement = localElement.querySelector(".time");
+    let localDateElement = localElement.querySelector(".date");
+    let localNameElement = localElement.querySelector(".city-name");
+
+    let localCityName = localTimeZone.replace("_", " ").split("/")[1];
+
+    localTimeElement.innerHTML = `${localTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    )}`;
+    localDateElement.innerHTML = `${localTime.format("MMMM Do YYYY")}`;
+    localNameElement.innerHTML = `${localCityName}`;
+  }
+}
 
 //Select city on dropdown and show city's time
 
@@ -33,3 +52,6 @@ function updateCity(event) {
 
 let cityList = document.getElementById("city-list");
 cityList.addEventListener("change", updateCity);
+
+showTime();
+setInterval(showTime, 1000);
