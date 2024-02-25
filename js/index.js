@@ -17,6 +17,19 @@ function showTime() {
     localDateElement.innerHTML = `${localTime.format("MMMM Do YYYY")}`;
     localNameElement.innerHTML = `${localCityName}`;
   }
+  let parisElement = document.querySelector("#paris");
+  if (parisElement) {
+    let parisTime = moment().tz("Europe/Paris");
+
+    let parisTimeElement = parisElement.querySelector(".time");
+    let parisDateElement = parisElement.querySelector(".date");
+    let parisNameElement = parisElement.querySelector(".city-name");
+
+    parisTimeElement.innerHTML = `${parisTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    )}`;
+    parisDateElement.innerHTML = `${parisTime.format("MMMM Do YYYY")}`;
+  }
 }
 
 //Select city on dropdown and show city's time
@@ -33,7 +46,7 @@ function updateCity(event) {
       if (event.target.value.length > 0) {
         let cityTime = moment().tz(event.target.value);
 
-        cityElement.innerHTML = `<div class="col">
+        cityElement.innerHTML = `<div class="row"><div class="col">
           <h2 class="city-name">${selectedOptionHtml}</h2>
           <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
         </div>
@@ -42,7 +55,8 @@ function updateCity(event) {
             "h:mm:ss [<small>]A[</small>]"
           )}</div>
         </div>
-        <div class="back"><a href="/">Back to Local Time</a></div>`;
+        </div>
+        <div class="back"><a href="/">Back to Home</a></div>`;
       }
     },
 
