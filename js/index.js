@@ -42,7 +42,7 @@ function updateCity(event) {
             "h:mm:ss [<small>]A[</small>]"
           )}</div>
         </div>
-        <div class="back"><a href="/">Go back</a></div>`;
+        <div class="back"><a href="/">Back to Local Time</a></div>`;
       }
     },
 
