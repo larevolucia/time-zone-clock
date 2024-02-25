@@ -16,60 +16,30 @@
   </head>
   <body>
     <div class="container">
-      <h1>timezone</h1>
+      <div class="content">
+        <h1>timezone</h1>
 
-      <select name="city-list" id="city-list">
-        <option value="">--Select a City--</option>
-        <option value="Brazil/East" id="rio-de-janeiro">Rio de Janeiro</option>
-        <option value="Europe/Amsterdam" id="amsterdam">Amsterdam</option>
-        <option value="Asia/Tokyo" id="tokyo">Tokyo</option>
-      </select>
+        <select class="text-center" id="city-list">
+          <option value="">--Select City--</option>
+          <option value="current">Current Location</option>
+          <option value="America/New_York">New York</option>
+          <option value="Brazil/East">Rio De Janeiro</option>
+          <option value="Europe/London">London</option>
+          <option value="Europe/Amsterdam">Amsterdam</option>
+          <option value="Asia/Tokyo">Tokyo</option>
+          <option value="Australia/Sydney">Sydney</option>
+        </select>
 
-      <div class="city row" id="city-data">
-        <div class="col">
-          <h2 class="city-name"></h2>
-          <div class="date"></div>
-        </div>
-        <div class="col">
-          <div class="time"></div>
+        <div class="city row" id="cities">
+          <p>Your zone in time.</p>
+          <p>Select a city to get started.</p>
         </div>
       </div>
-<!-- 
-      <div class="city row" id="rio-de-janeiro">
-        <div class="col">
-          <h2>Rio de Janeiro</h2>
-          <div class="date"></div>
-        </div>
-        <div class="col">
-          <div class="time"></div>
-        </div>
-      </div>
-
-      <div class="city row" id="amsterdam">
-        <div class="col">
-          <h2>Amsterdam</h2>
-          <div class="date"></div>
-        </div>
-        <div class="col">
-          <div class="time"></div>
-        </div>
-      </div>
-
-      <div class="city row" id="tokyo">
-        <div class="col">
-          <h2>Tokyo</h2>
-          <div class="date"></div>
-        </div>
-        <div class="col">
-          <div class="time"></div>
-        </div>
-      </div>
-    </div> -->
-    <footer>
-      Coded by Lúcia Reis and open sourced at
-      <a href="https://github.com/larevolucia/time-zone-clock">GitHub</a>
-    </footer>
-
+      <footer>
+        💻 Coded by Lúcia Rei. Open sourced at
+        <a href="https://github.com/larevolucia/time-zone-clock">GitHub</a>
+      </footer>
+    </div>
     <script src="js/index.js"></script>
   </body>
 </html>
