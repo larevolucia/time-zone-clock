@@ -23,7 +23,6 @@ function showTime() {
 
     let parisTimeElement = parisElement.querySelector(".time");
     let parisDateElement = parisElement.querySelector(".date");
-    let parisNameElement = parisElement.querySelector(".city-name");
 
     parisTimeElement.innerHTML = `${parisTime.format(
       "h:mm:ss [<small>]A[</small>]"
